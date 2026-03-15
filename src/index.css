@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KiddoVerse — Playful Children's Theme */
+
+@layer base {
+  :root {
+    /* Light Theme — Warm & Playful */
+    --background: 30 50% 97%;
+    --foreground: 260 30% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 30% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 30% 18%;
+
+    --primary: 340 82% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 60% 92%;
+    --secondary-foreground: 260 30% 18%;
+
+    --muted: 30 30% 94%;
+    --muted-foreground: 260 10% 46%;
+
+    --accent: 170 60% 90%;
+    --accent-foreground: 260 30% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 20% 88%;
+    --input: 260 14% 92%;
+    --ring: 340 82% 62%;
+
+    --radius: 0.75rem;
+
+    /* KiddoVerse Color Tokens */
+    --kiddo-coral: 340 82% 62%;
+    --kiddo-coral-glow: 340 82% 72%;
+    --kiddo-sky: 200 85% 58%;
+    --kiddo-sunshine: 45 95% 55%;
+    --kiddo-mint: 160 60% 50%;
+    --kiddo-lavender: 270 70% 65%;
+    --kiddo-peach: 20 90% 75%;
+
+    --gradient-kiddo: linear-gradient(135deg, hsl(340 82% 62%), hsl(270 70% 65%));
+    --gradient-page: linear-gradient(180deg, hsl(30 50% 97%), hsl(0 0% 100%));
+    --gradient-glow: radial-gradient(circle, hsl(340 82% 62% / 0.08), transparent);
+
+    --shadow-soft: 0 2px 12px hsl(340 82% 62% / 0.08);
+    --shadow-card: 0 4px 16px hsl(260 30% 18% / 0.05);
+
+    --transition-playful: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-gentle: all 0.3s ease;
+
+    --font-kiddo: 'Fredoka One', cursive;
+    --font-story: 'Baloo 2', cursive;
+
+    --sidebar-background: 30 40% 96%;
+    --sidebar-foreground: 260 30% 18%;
+    --sidebar-primary: 340 82% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 60% 94%;
+    --sidebar-accent-foreground: 260 30% 18%;
+    --sidebar-border: 260 20% 88%;
+    --sidebar-ring: 340 82% 62%;
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.04);
+    --shadow: 0 2px 4px hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 8px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 8px 16px hsl(0 0% 0% / 0.08);
+  }
+
+  .dark {
+    /* KiddoVerse Dark Theme — Dreamy Night */
+    --background: 260 30% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 260 28% 16%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 260 28% 16%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 340 82% 65%;
+    --primary-foreground: 260 30% 10%;
+
+    --secondary: 260 30% 22%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 260 28% 20%;
+    --muted-foreground: 260 15% 60%;
+
+    --accent: 260 30% 24%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 260 25% 22%;
+    --input: 260 28% 16%;
+    --ring: 340 82% 65%;
+
+    --kiddo-coral: 340 82% 65%;
+    --kiddo-coral-glow: 340 82% 75%;
+    --kiddo-sky: 200 85% 60%;
+    --kiddo-sunshine: 45 95% 58%;
+    --kiddo-mint: 160 60% 52%;
+    --kiddo-lavender: 270 70% 68%;
+    --kiddo-peach: 20 90% 78%;
+
+    --gradient-kiddo: linear-gradient(135deg, hsl(340 82% 65%), hsl(270 70% 68%));
+    --gradient-page: linear-gradient(180deg, hsl(260 30% 12%), hsl(260 28% 16%));
+    --gradient-glow: radial-gradient(circle, hsl(340 82% 65% / 0.15), transparent);
+
+    --shadow-soft: 0 2px 12px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.15);
+
+    --font-kiddo: 'Fredoka One', cursive;
+    --font-story: 'Baloo 2', cursive;
+
+    --sidebar-background: 260 30% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 340 82% 65%;
+    --sidebar-primary-foreground: 260 30% 10%;
+    --sidebar-accent: 260 28% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 260 25% 22%;
+    --sidebar-ring: 340 82% 65%;
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.1);
+    --shadow: 0 2px 4px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 8px hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 8px 16px hsl(0 0% 0% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Baloo 2', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* KiddoVerse Text Effects */
+  .kiddo-glow {
+    color: hsl(var(--primary));
+  }
+
+  .story-text {
+    font-family: var(--font-story);
+    color: hsl(var(--foreground));
+    line-height: 1.8;
+  }
+
+  .kiddo-title {
+    font-family: var(--font-kiddo);
+    letter-spacing: 0.02em;
+  }
+  
+  /* Playful Border */
+  .rainbow-border {
+    border: 2px solid hsl(var(--kiddo-coral));
+    border-radius: var(--radius);
+  }
+  
+  /* KiddoVerse Background */
+  .kiddo-bg {
+    background: var(--gradient-page);
+    position: relative;
+  }
+  
+  .kiddo-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-glow);
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  /* Rainbow gradient text */
+  .rainbow-text {
+    background: linear-gradient(90deg, 
+      hsl(var(--kiddo-coral)),
+      hsl(var(--kiddo-sunshine)),
+      hsl(var(--kiddo-mint)),
+      hsl(var(--kiddo-sky)),
+      hsl(var(--kiddo-lavender)),
+      hsl(var(--kiddo-coral))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: rainbow-shift 4s linear infinite;
+  }
+}
+
+@layer utilities {
+  /* Hover Effects */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-md;
+  }
+
+  /* Staggered Children Animation */
+  .stagger-children > * {
+    @apply animate-fade-in;
+  }
+
+  /* Wiggle on hover */
+  .wiggle-hover:hover {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  /* Gentle floating */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Link underline animation */
+  .story-link * {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Glassmorphism */
+  .glass-card {
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl;
+  }
+  
+  .glass-dark {
+    @apply bg-black/60 backdrop-blur-2xl border border-white/5 shadow-2xl;
+  }
+
+  /* Typography additions */
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .font-serif-elegant {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Scroll Utilities */
+  .fade-up {
+    animation: fade-up-reveal linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+  
+  .scale-in {
+    animation: scale-up-reveal linear;
+    animation-timeline: view();
+    animation-range: entry 5% cover 25%;
+  }
+}
+
+@keyframes fade-up-reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-up-reveal {
+  from { opacity: 0.8; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}

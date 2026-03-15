@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.env
+.git
+Dockerfile
+.dockerignore
+imagegen_venv
+image_gen.py
+test_fooocus_api.js
