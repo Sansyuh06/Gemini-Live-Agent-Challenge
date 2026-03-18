@@ -20,7 +20,7 @@ gcloud run deploy $SERVICE_NAME \
   --platform managed \
   --region $REGION \
   --allow-unauthenticated \
-  --set-env-vars GEMINI_API_KEY="AIzaSyAwZaGEde2ly7basNHKBhCySXQ9U_3zh9k"
+  --set-env-vars GEMINI_API_KEY=" "
 
 # Get the Backend URL
 BACKEND_URL=$(gcloud run services describe $SERVICE_NAME --platform managed --region $REGION --format 'value(status.url)')
